@@ -28,54 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.lstInstructors = new System.Windows.Forms.ListBox();
+            this.lstCourses = new System.Windows.Forms.ListBox();
+            this.lstStudents = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lstInstructors
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 44);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(254, 186);
-            this.listBox1.TabIndex = 0;
+            this.lstInstructors.FormattingEnabled = true;
+            this.lstInstructors.Location = new System.Drawing.Point(12, 44);
+            this.lstInstructors.Name = "lstInstructors";
+            this.lstInstructors.Size = new System.Drawing.Size(254, 186);
+            this.lstInstructors.TabIndex = 0;
+            this.lstInstructors.SelectedIndexChanged += new System.EventHandler(this.lstInstructors_SelectedIndexChanged);
             // 
-            // listBox2
+            // lstCourses
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(270, 44);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(254, 186);
-            this.listBox2.TabIndex = 1;
+            this.lstCourses.FormattingEnabled = true;
+            this.lstCourses.Location = new System.Drawing.Point(270, 44);
+            this.lstCourses.Name = "lstCourses";
+            this.lstCourses.Size = new System.Drawing.Size(254, 186);
+            this.lstCourses.TabIndex = 1;
+            this.lstCourses.SelectedIndexChanged += new System.EventHandler(this.lstCourses_SelectedIndexChanged);
             // 
-            // listBox3
+            // lstStudents
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(534, 44);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(254, 186);
-            this.listBox3.TabIndex = 2;
+            this.lstStudents.FormattingEnabled = true;
+            this.lstStudents.Location = new System.Drawing.Point(534, 44);
+            this.lstStudents.Name = "lstStudents";
+            this.lstStudents.Size = new System.Drawing.Size(254, 186);
+            this.lstStudents.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 282);
-            this.Controls.Add(this.listBox3);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lstStudents);
+            this.Controls.Add(this.lstCourses);
+            this.Controls.Add(this.lstInstructors);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox lstInstructors;
+        private System.Windows.Forms.ListBox lstCourses;
+        private System.Windows.Forms.ListBox lstStudents;
     }
 }
 
